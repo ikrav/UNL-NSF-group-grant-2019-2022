@@ -1,0 +1,28 @@
+\documentclass[11pt]{article} 
+
+\usepackage[margin=1in]{geometry}
+\usepackage{proposal}
+
+\newenvironment{packed_enum}{
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{enumerate}}
+
+\begin{document}
+
+\input{section_introduction}
+\input{section_prior_results}
+\input{section_cms_research}
+
+% This section is absorbed into Broader Impacts
+%        \input{section_education_outreach}
+
+\input{section_broader_impact}
+\input{section_conclusions}
+\newpage
+\setcounter{page}{1}
+\input{section_bibliography}
+
+\end{document}

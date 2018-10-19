@@ -1,0 +1,44 @@
+\typeout{Proposals macro 'proposal.sty'.  <August, 31, 2009>.}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{proposal}[7/4/09 Macros for our proposals.]
+\RequirePackage{bm}[1999/07/05]  % bold math, including Greek
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\RequirePackage{amssymb}
+\RequirePackage{amsmath}
+\RequirePackage{eso-pic}
+\RequirePackage{hyperref}
+\DeclareRobustCommand\yspace{\futurelet\@let@token\@yspace}
+\def\@yspace{%
+  \ifx\@let@token\bgroup\else
+  \ifx\@let@token\egroup\else
+  \ifx\@let@token\/\else
+  \ifx\@let@token\ \else
+  \ifx\@let@token~\else
+  \ifx\@let@token.\else
+  \ifx\@let@token!\else
+  \ifx\@let@token,\else
+  \ifx\@let@token:\else
+  \ifx\@let@token;\else
+  \ifx\@let@token?\else
+  \ifx\@let@token/\else
+  \ifx\@let@token'\else
+  \ifx\@let@token)\else
+  \ifx\@let@token-\else
+  \ifmmode\else
+   \space
+   \fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi}
+\newcommand{\GeV}{\ensuremath{\mathrm{\ Ge\kern -0.08em V}}\yspace}
+\newcommand{\TeV}{\ensuremath{\mathrm{\ Te\kern -0.08em V}}\yspace}
+\newcommand{\pb}{\ensuremath{\mathrm{\ pb}^{-1}}\yspace}%  Inverse picobarns.
+\newcommand{\nb}{\ensuremath{\mathrm{\ nb}^{-1}}\yspace}%  Inverse nanobarns.
+\newcommand{\fb}{\ensuremath{\mathrm{\ fb}^{-1}}\yspace}%  Inverse femptobarns.
+\newcommand{\antibar}[1]{\ensuremath{#1\bar{#1}}}%
+\newcommand{\ppbar}{\antibar{p}\yspace}
+\newcommand{\bbbar}{\antibar{b}\yspace}
+\newcommand{\mumu}{\ensuremath{\mu^+\mu^-}\yspace}
+\newcommand{\ttbar}{\antibar{t}\yspace}
+\newcommand{\lnu}{\ensuremath{\ell\nu}\yspace}
+\newcommand{\ppbartoWHtolnubb}{\ensuremath{\ppbar\to WH\to\lnu\bbbar}\yspace}
+\newcommand{\met}{\ensuremath{\not\!\! E_T}}
+\newcommand{\fixme}[1]{\textcolor{red}{FIXME: #1}}
